@@ -39,7 +39,7 @@ def make_random_map(map_width, map_height, map_name, output_path):
         for j in range(len(indices)):
             world_map[indices[j]][i] = world_map[indices[j]][i] + 2
 
-        print_map_console(world_map)
+    print_map_console(world_map)
 
 
 ### a function to print a given map in a readable format
@@ -61,7 +61,7 @@ def print_map_console(world_map):
             elif converted_map[i][j] == 2:
                 converted_map[i][j] = "|"
             elif converted_map[i][j] == 3:
-                converted_map[i][j] == "+"
+                converted_map[i][j] = "+"
             else:
                 print("Unknown number in the map")
                 SystemExit(0)
