@@ -18,7 +18,7 @@ def start(map_width=10, map_height=10, map_name="Map", output_path="./results/")
 
 ### a function to make a random map
 def make_random_map(map_width, map_height, map_name, output_path):
-    print("makeRandomMap()")
+    print("make_random_map()")
     import random
     random.seed(1234)
 
@@ -48,7 +48,7 @@ def make_random_map(map_width, map_height, map_name, output_path):
 ### 2 - vertical road
 ### 3 - cross road
 def print_map_console(world_map):
-    print("printMapConsole()")
+    print("print_map_console()")
 
     ### convert the given map
     converted_map = world_map
@@ -69,6 +69,14 @@ def print_map_console(world_map):
     ### print the given map
     for i in range(len(converted_map)):
         print(*converted_map[i], sep="")
+
+### a function to print a given map in a bigger format
+### 0 - nothing
+### 1 - horizontal road
+### 2 - vertical road
+### 3 - cross road
+def print_map_console2(world_map):
+    print("print_map_console2()")
 
 
 start()
