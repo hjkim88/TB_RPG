@@ -51,7 +51,8 @@ def print_map_console(world_map):
     print("print_map_console()")
 
     ### convert the given map
-    converted_map = world_map
+    from copy import deepcopy
+    converted_map = deepcopy(world_map)
     for i in range(len(converted_map)):
         for j in range(len(converted_map[0])):
             if converted_map[i][j] == 0:
@@ -68,7 +69,7 @@ def print_map_console(world_map):
 
     ### print the given map
     for i in range(len(converted_map)):
-        print(*converted_map[i], sep="")
+        print(*converted_map[i], sep=" ")
 
 ### a function to print a given map in a bigger format
 ### 0 - nothing
