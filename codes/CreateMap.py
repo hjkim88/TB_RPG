@@ -7,7 +7,7 @@
 #
 #   Instruction
 #               1. import CreateMap
-#               2. Run the function "MakeCircosPlot1.start(dataPath="./data/data1.xlsx", outputPath="./results/cirplot1.png"))" - specify the inputs
+#               2. Run the function CreatMap.start(map_width=10, map_height=10, map_name="Map", output_path="./results/") - specify the inputs
 #               3. The results will be generated in the outputPath
 ###
 
