@@ -8,7 +8,7 @@
 #   Instruction
 #               1. import LogInFrame
 #               2. Run the function LogInFrame.start() - specify the inputs
-#               3. The results will be generated in the outputPath
+#               3. The LogIn frame will be presented
 ###
 
 ### import modules
