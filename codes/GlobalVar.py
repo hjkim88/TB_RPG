@@ -7,9 +7,13 @@
 #
 #   Instruction
 #               1. import GlobalVar
-#               2. Run the function DBControl.start() - specify the inputs
-#               3. It will help you to connect to the database
+#               2. Use the gVars class to access to the variables
 ###
+
+db_id = "db_guest"
+db_pwd = "cnx2754"
+host = "127.0.0.1"
+db_name = "tb_rpg"
 
 
 
