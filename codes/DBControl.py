@@ -13,25 +13,37 @@
 
 ### import modules
 import mysql.connector as con
-
+import codes.GlobalVar as gv
 
 ### a function to connect to a database with given parameters
 def db_connect(id, pwd, host, db):
-    cnx = con.connect(user=id, password=pwd,
-                      host=host,
-                      database=db)
+    cnx = None
+    try:
+        cnx = con.connect(user=id, password=pwd,
+                          host=host,
+                          database=db)
+    except con.Error as err:
+        if err.errno == con.errorcode.ER_ACCESS_DENIED_ERROR:
+            print("Something is wrong with your user name or password")
+        elif err.errno == con.errorcode.ER_BAD_DB_ERROR:
+            print("Database does not exist")
+        else:
+            print(err)
+    else:
+        print("DB connected")
+        
     return cnx
-
-
-### a function to close a given db connection
-def db_close(cnx):
-    cnx.close()
 
 
 ###
 def start():
     print("DBControl.py")
-    db_connect()
+    cnx = db_connect(id=gv.db_id, pwd=gv.db_pwd, host=gv.host, db=gv.db_name)
+    cursor = cnx.cursor()
+    cursor.execute("SELECT * FROM user")
+    print(cursor.fetchall())
+    cursor.close()
+    cnx.close()
 
 
-
+start()
